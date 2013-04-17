@@ -2842,6 +2842,44 @@ var respecConfig = {
     </section>
     <section class="appendix">
       <h2>
+        Relationship to Widgets
+      </h2>
+      <p>
+        This specification builds on the lessons learned from the "widgets"
+        work previously undertaken at the W3C - and expands on it significantly
+        with many new enabling features for the Web platform. So, although on
+        the surface there are many similarities between packaged applications
+        and "widgets", the types of applications defined in this specification
+        differ from w3c widgets.
+      </p>
+      <p>
+        Firstly, thanks to hosted applications, it is no longer a requirement
+        that applications be packaged in a Zip file. This makes it possible to
+        provide application metadata and configuration options for all
+        applications on the Web - not just those inside Zip files - in a way
+        that is backwards compatible with legacy user agents and user agents
+        that don't support this specification.
+      </p>
+      <ol>
+        <li>Hosted apps are just Web apps, hence can rely on parts of the Web
+        platform that are inherently tied to HTTP/S and the concept of same
+        origin. This makes it significantly easier to perform cross domain
+        requests using CORS, instead having to set special access rules using
+        WARP.
+        </li>
+        <li>Shift to JSON. Although few people complained in practice about
+        Widget Configuration documents being XML, the move to JSON is more in
+        line with what modern web applications are using.
+        </li>
+        <li>Better control over content security. As W3C widgets were
+        standardized long before Content Security Policy, they were not able to
+        make use of the technology. CSP allows finer-grained control over where
+        content can be sourced from than WARP.
+        </li>
+      </ol>
+    </section>
+    <section class="appendix">
+      <h2>
         Acknowledgments
       </h2>
       <p>
